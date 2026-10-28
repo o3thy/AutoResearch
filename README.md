@@ -1,6 +1,6 @@
 # AutoResearch
 
-版本：1.0.0（本地发布准备中）
+版本：v0.1
 
 以 ResearchRabbit、Zotero 和 Obsidian 串联文献发现、PDF 归档与阅读整理的项目。用户可以逐步运行命令，也可以让支持项目内技能的 AI agent 按工作流操作。
 
@@ -192,4 +192,4 @@ ResearchRabbit 登录和 Zotero 授权由用户在各自界面完成。项目 CL
 
 ## 许可证与上游来源
 
-本项目中由项目贡献者拥有授权权利的原创内容按 [MIT License](LICENSE) 发布。第三方材料保留各自的许可及版权要求；第三阶段上游快照未提供独立许可证，其再分发授权尚待确认。MIT 许可证不自动覆盖该第三方源码。详情见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+本项目中由项目贡献者拥有授权权利的原创内容按 [MIT License](LICENSE) 发布。第三方材料保留各自的许可及版权要求；第三阶段上游快照未提供独立许可证；项目维护者已获得口头再分发授权。MIT 许可证不自动覆盖该第三方源码，其他使用者的权利范围以权利人的授权为准。详情见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

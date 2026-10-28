@@ -2,8 +2,10 @@
 
 The root MIT License applies only to original material whose copyright holders
 have authorized that license. Third-party material retains its own copyright
-and licensing terms. In particular, the third-stage source below is pending
-redistribution authorization; the root license does not grant those rights.
+and licensing terms. The project maintainer reports having received verbal authorization to
+redistribute the third-stage source below. The root license does not grant
+rights to that third-party source; other users should obtain the rights they
+need from its copyright holders.
 
 ## Third stage: Zotero Analytical Workflow Skills
 
