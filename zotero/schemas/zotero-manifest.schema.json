@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "zotero-manifest.schema.json",
+  "title": "Zotero PDF download and archive run",
+  "type": "object",
+  "required": ["schema_version", "run_id", "input_file", "download_dir", "manifest_path", "failed_csv", "target", "records", "counts"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "run_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "input_file": {"type": "string"},
+    "download_dir": {"type": "string"},
+    "manifest_path": {"type": "string"},
+    "failed_csv": {"type": "string"},
+    "target": {
+      "type": ["object", "null"],
+      "required": ["server_id", "collection_key", "collection_name"],
+      "properties": {"server_id": {"type": "string"}, "collection_key": {"type": "string"}, "collection_name": {"type": "string"}}
+    },
+    "counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "doi", "state", "suggested_filename", "item_key", "attachment_key", "pdf_path"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-f0-9]{16}$"},
+          "title": {"type": "string", "minLength": 1},
+          "doi": {"type": ["string", "null"]},
+          "state": {"enum": ["pending", "downloaded", "download_failed", "missing_doi", "attached", "attachment_failed"]},
+          "suggested_filename": {"type": "string"},
+          "item_key": {"type": ["string", "null"]},
+          "attachment_key": {"type": ["string", "null"]},
+          "pdf_path": {"type": ["string", "null"]},
+          "verification": {"type": "object", "required": ["sha256", "md5", "pages", "identity"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "manual_import": {"type": "object"}
+  },
+  "additionalProperties": false
+}

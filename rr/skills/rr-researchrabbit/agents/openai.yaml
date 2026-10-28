@@ -1,0 +1,6 @@
+interface:
+  display_name: "RR ResearchRabbit"
+  short_description: "Search and capture ResearchRabbit citation trails"
+  default_prompt: "Use $rr-researchrabbit to search ResearchRabbit and capture a verified seed's related papers for AutoResearch."
+policy:
+  allow_implicit_invocation: true

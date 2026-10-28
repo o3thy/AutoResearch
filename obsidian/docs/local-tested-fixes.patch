@@ -1,0 +1,35 @@
+diff --git a/tests/test_portability.py b/tests/test_portability.py
+index 23b7eb8..d483285 100644
+--- a/tests/test_portability.py
++++ b/tests/test_portability.py
+@@ -233,7 +233,7 @@ class PortabilityTests(unittest.TestCase):
+                 CREATE TABLE itemCreators(itemID INTEGER, creatorID INTEGER, orderIndex INTEGER);
+                 CREATE TABLE collections(collectionID INTEGER PRIMARY KEY, collectionName TEXT);
+                 CREATE TABLE collectionItems(collectionID INTEGER, itemID INTEGER);
+-                CREATE TABLE itemAttachments(itemID INTEGER, key TEXT, parentItemID INTEGER, path TEXT, contentType TEXT);
++                CREATE TABLE itemAttachments(itemID INTEGER, parentItemID INTEGER, path TEXT, contentType TEXT);
+                 CREATE TABLE itemAnnotations(itemID INTEGER, parentItemID INTEGER, type TEXT, authorName TEXT, comment TEXT, text TEXT, pageLabel TEXT);
+                 CREATE TABLE itemNotes(itemID INTEGER, parentItemID INTEGER, note TEXT);
+             """)
+@@ -250,7 +250,7 @@ class PortabilityTests(unittest.TestCase):
+             db.execute("INSERT INTO itemCreators VALUES (1, 1, 0)")
+             db.execute("INSERT INTO collections VALUES (1, 'Methods')")
+             db.execute("INSERT INTO collectionItems VALUES (1, 1)")
+-            db.execute("INSERT INTO itemAttachments VALUES (2, 'PDFKEY1', 1, 'storage:paper.pdf', 'application/pdf')")
++            db.execute("INSERT INTO itemAttachments VALUES (2, 1, 'storage:paper.pdf', 'application/pdf')")
+             db.execute("INSERT INTO itemAnnotations VALUES (3, 2, 'highlight', 'Ada', '', 'verified text', '2')")
+             db.execute("INSERT INTO itemNotes VALUES (4, 1, '<p>Research note</p>')")
+             db.commit()
+diff --git a/tools/zotero_readonly_fetch.py b/tools/zotero_readonly_fetch.py
+index 3962f8e..9b9bdb9 100644
+--- a/tools/zotero_readonly_fetch.py
++++ b/tools/zotero_readonly_fetch.py
+@@ -68,7 +68,7 @@ def main() -> int:
+             except sqlite3.OperationalError:
+                 creators = []
+         collections = [r[0] for r in db.execute("SELECT c.collectionName FROM collectionItems ci JOIN collections c ON c.collectionID=ci.collectionID WHERE ci.itemID=?", (item_id,))]
+-        attachments = db.execute("SELECT a.itemID, a.key, a.path, a.contentType FROM items i JOIN itemAttachments a USING(itemID) WHERE a.parentItemID=?", (item_id,)).fetchall()
++        attachments = db.execute("SELECT a.itemID, i.key, a.path, a.contentType FROM items i JOIN itemAttachments a USING(itemID) WHERE a.parentItemID=?", (item_id,)).fetchall()
+         pdfs = []
+         for attachment in attachments:
+             path_value = attachment["path"] or ""

@@ -1,0 +1,207 @@
+{
+  "upstream_url": "https://github.com/cheneternity/Zotero-Analytical-Workflow-Skills",
+  "source_commit": "6b3202cfb74b9221c3b8048b1dab99e0a294a496",
+  "integrated_on": "2026-10-28",
+  "local_compatibility_patch": "docs/local-tested-fixes.patch",
+  "local_patch_reason": "Use items.key for PDF attachment identity; align SQLite test fixture with Zotero attachment schema.",
+  "license": "No standalone LICENSE file present in this source snapshot; upstream materials retain their original terms. No MIT license is assumed.",
+  "files": [
+    {
+      "source_path": ".github/workflows/ci.yml",
+      "project_path": ".github/workflows/ci.yml",
+      "sha256": "b31853448efc2553d8510e79d7e486ecb2065868c975e6115642d1ca3125761c"
+    },
+    {
+      "source_path": ".gitignore",
+      "project_path": ".gitignore",
+      "sha256": "6f42ca30031d6be0e6bae2f3ade51598ccb5a64732c5bfbc849d41fd746ca644"
+    },
+    {
+      "source_path": "INSTALL.md",
+      "project_path": "UPSTREAM_INSTALL.md",
+      "sha256": "54e7dce1f325bb771777bcf4d938520919ea06bea5060d6989b29af494892a2d",
+      "original_sha256": "6fa3322575ac8e8c80b4def52fe6fb15d0c22f95a2d348136353027807fde53e",
+      "integration_change": "Adjusted relative README link after module README rename."
+    },
+    {
+      "source_path": "README.md",
+      "project_path": "UPSTREAM_README.md",
+      "sha256": "3055f73ca289b08fbc773e8dea5c60fe2c06f34868edcf0b59d637f7a5fdfa8b"
+    },
+    {
+      "source_path": "config.example.toml",
+      "project_path": "config.example.toml",
+      "sha256": "6d510792c5ad881091beb58f68a288df0e3f7876b14bb0666ef8b62b598f4acd"
+    },
+    {
+      "source_path": "skills/research-vault-ingest-orchestrator/SKILL.md",
+      "project_path": "skills/research-vault-ingest-orchestrator/SKILL.md",
+      "sha256": "0cd3b5de98a38052aea326eec3f748c03e5a8f430b526486a5a001f00fd63535"
+    },
+    {
+      "source_path": "skills/research-vault-ingest-orchestrator/references/ingest-gates.md",
+      "project_path": "skills/research-vault-ingest-orchestrator/references/ingest-gates.md",
+      "sha256": "2a15f58a49e59e09e85b8f1c10371029c54c9eb54759589666d6272ba136afa2"
+    },
+    {
+      "source_path": "skills/research-vault-ingest-orchestrator/references/pipeline.md",
+      "project_path": "skills/research-vault-ingest-orchestrator/references/pipeline.md",
+      "sha256": "71de6d2a823b4a25d8eb818ba5a65b1e98e6bd79a16904fb7a0f85469701b903"
+    },
+    {
+      "source_path": "skills/research-vault-ingest-orchestrator/references/system-architecture.md",
+      "project_path": "skills/research-vault-ingest-orchestrator/references/system-architecture.md",
+      "sha256": "705557be60fbf179cba968a70c7247fd1694ebe56b7d722799c3724520a6ee49"
+    },
+    {
+      "source_path": "skills/research-vault-ingest-orchestrator/references/validation-contract.md",
+      "project_path": "skills/research-vault-ingest-orchestrator/references/validation-contract.md",
+      "sha256": "9986c4cf7a06b6d9cf799792a420ab6a1f4349e125d56f3c193f2ba4da3713a5"
+    },
+    {
+      "source_path": "skills/research-vault-ingest-orchestrator/references/workflow-states.md",
+      "project_path": "skills/research-vault-ingest-orchestrator/references/workflow-states.md",
+      "sha256": "f075d19b8e19c12abcc15e22986b65f825d8ff02d95332db8871defd8ee360c6"
+    },
+    {
+      "source_path": "skills/research-vault-knowledge-maintainer/SKILL.md",
+      "project_path": "skills/research-vault-knowledge-maintainer/SKILL.md",
+      "sha256": "209eae85f8d4b7b940bce3d9c4c5849c65ea30d4ef7902821c7cd1eded399975"
+    },
+    {
+      "source_path": "skills/research-vault-knowledge-maintainer/references/knowledge-schema.md",
+      "project_path": "skills/research-vault-knowledge-maintainer/references/knowledge-schema.md",
+      "sha256": "486edec3816f08de37f6b89a5709e6f3572eab1c71a9c91a636d98d14c6a5b76"
+    },
+    {
+      "source_path": "skills/research-vault-knowledge-maintainer/references/synthesis-maturity-gate.md",
+      "project_path": "skills/research-vault-knowledge-maintainer/references/synthesis-maturity-gate.md",
+      "sha256": "f5cded0efa89f593bad8904464edb242e4db13148abfee9795db585af6314791"
+    },
+    {
+      "source_path": "skills/research-vault-knowledge-maintainer/scripts/validate_research_vault_knowledge.py",
+      "project_path": "skills/research-vault-knowledge-maintainer/scripts/validate_research_vault_knowledge.py",
+      "sha256": "749b966fec60ae010dc1dac49c2cda947778716516669407a8b059243ef951a7"
+    },
+    {
+      "source_path": "skills/research-vault-literature-retrieval/SKILL.md",
+      "project_path": "skills/research-vault-literature-retrieval/SKILL.md",
+      "sha256": "e85fdda8f3863060aea04ee8a822f2ed06b913c443293d16a9305bae91326c1f"
+    },
+    {
+      "source_path": "skills/research-vault-literature-retrieval/agents/openai.yaml",
+      "project_path": "skills/research-vault-literature-retrieval/agents/openai.yaml",
+      "sha256": "4511b3be54a76a941613cf245ce024f54503b70e52b2f68c4be370ac1c6e216c"
+    },
+    {
+      "source_path": "skills/research-vault-literature-retrieval/references/retrieval-routing.md",
+      "project_path": "skills/research-vault-literature-retrieval/references/retrieval-routing.md",
+      "sha256": "687a77322a689fe3f7b512ee0b5a54691c62f77edd71b0c498c42c99e6e62bef"
+    },
+    {
+      "source_path": "skills/zotero-analytical-writer/SKILL.md",
+      "project_path": "skills/zotero-analytical-writer/SKILL.md",
+      "sha256": "cf31cace16b448a4933059c37fe38791ba9cbe085f396189ca2ce896b0d9d532"
+    },
+    {
+      "source_path": "skills/zotero-collection-manager/SKILL.md",
+      "project_path": "skills/zotero-collection-manager/SKILL.md",
+      "sha256": "639f307c36178f0d0ae87fb4012b1f4d4901099cfbdc37b96856491e177a4b14"
+    },
+    {
+      "source_path": "skills/zotero-data-fetcher/SKILL.md",
+      "project_path": "skills/zotero-data-fetcher/SKILL.md",
+      "sha256": "3b811930b4b4a866f4db3498fd4beb154eb3fb4d7070b26934e35f7ea10007f5"
+    },
+    {
+      "source_path": "skills/zotero-fulltext-archiver/SKILL.md",
+      "project_path": "skills/zotero-fulltext-archiver/SKILL.md",
+      "sha256": "eed888c469128023ca04bb58d882ba8f15753b21a2e41d20a50dc0f7e4c8c2c8"
+    },
+    {
+      "source_path": "skills/zotero-fulltext-archiver/agents/openai.yaml",
+      "project_path": "skills/zotero-fulltext-archiver/agents/openai.yaml",
+      "sha256": "15e59651c15aa1b445389c79bec442bd17ea341d0fa5eba09d8f366584394843"
+    },
+    {
+      "source_path": "templates/知识库模板/README_知识库模板说明.md",
+      "project_path": "templates/知识库模板/README_知识库模板说明.md",
+      "sha256": "7fc3a49693c2373922b4610d93d8572695e53c26da7af5138c0f462f596272d1"
+    },
+    {
+      "source_path": "templates/知识库模板/主题模板.md",
+      "project_path": "templates/知识库模板/主题模板.md",
+      "sha256": "5dd881d83703792bc7b0d3985d7afa97d4eb4894cc26666d9d1a477aa89f8394"
+    },
+    {
+      "source_path": "templates/知识库模板/争议模板.md",
+      "project_path": "templates/知识库模板/争议模板.md",
+      "sha256": "ebff886eef796f3860190e8a0ae84764a9a9f3a26025058b280805aeedc05042"
+    },
+    {
+      "source_path": "templates/知识库模板/关系模板.md",
+      "project_path": "templates/知识库模板/关系模板.md",
+      "sha256": "89ef1a007f4f5f1de6a9542282a2e3a6ecc4561f50eccb9e16f874838f8064d3"
+    },
+    {
+      "source_path": "templates/知识库模板/方法模板.md",
+      "project_path": "templates/知识库模板/方法模板.md",
+      "sha256": "aaaf563c27b76e4dbb7bd17ae2884ea11d4c13f9038d977ebb0f959dfe99bb41"
+    },
+    {
+      "source_path": "templates/知识库模板/概念模板.md",
+      "project_path": "templates/知识库模板/概念模板.md",
+      "sha256": "c924a58f42b2a5f44d7afa6a3819c058dccf02dd82aeb82500d9b59d22084638"
+    },
+    {
+      "source_path": "templates/知识库模板/综合模板.md",
+      "project_path": "templates/知识库模板/综合模板.md",
+      "sha256": "79afef69b7e354e3ab68fefb90d598ea9f64096ee6039f9825c25e372b009b19"
+    },
+    {
+      "source_path": "templates/论文精读模板.md",
+      "project_path": "templates/论文精读模板.md",
+      "sha256": "4813ac27fc1b221aa3d5cb23cc81c7958a169e91e49b9d28e4182b216996c7a1"
+    },
+    {
+      "source_path": "tests/test_portability.py",
+      "project_path": "tests/test_portability.py",
+      "sha256": "aab6ac9693469b25348bc8b92b6fe82d47c8ee8c9260eb32d9fdd56a1b346b81"
+    },
+    {
+      "source_path": "tools/check_environment.py",
+      "project_path": "tools/check_environment.py",
+      "sha256": "8c29f7b1f653da7b5d6e7e703d7b75a4879f60ade732359a9148d974e9474cf6"
+    },
+    {
+      "source_path": "tools/check_retrieval_sync.py",
+      "project_path": "tools/check_retrieval_sync.py",
+      "sha256": "df3604f01c57b734d0ad4dd0719f4cd93a64490ee5693dcfcb52e601f4b7a637"
+    },
+    {
+      "source_path": "tools/config.py",
+      "project_path": "tools/config.py",
+      "sha256": "c6c9c91b96e349e81901bf47c02c5d3f2a9e7b0986ae984588349d4baca54045"
+    },
+    {
+      "source_path": "tools/init_vault.py",
+      "project_path": "tools/init_vault.py",
+      "sha256": "93d64e23a28a4b527b0cf85c8c904c71f0be15769ca05d73a54bcd8ec298774b"
+    },
+    {
+      "source_path": "tools/run_mineru_production.py",
+      "project_path": "tools/run_mineru_production.py",
+      "sha256": "5f2f87ced3f81e5aa8a52e49d33796de2c92883bce92ad27b38f51e228eafdde"
+    },
+    {
+      "source_path": "tools/validate_research_vault_literature_links.py",
+      "project_path": "tools/validate_research_vault_literature_links.py",
+      "sha256": "f34ee25de25166141a793e4c4b0ac5caa11a53c42f0075b3865967bb27efd1b1"
+    },
+    {
+      "source_path": "tools/zotero_readonly_fetch.py",
+      "project_path": "tools/zotero_readonly_fetch.py",
+      "sha256": "c0eee3a1f40bc427f974a1b04c8f02c2da2706a4d5744aa720edb5769074cb72"
+    }
+  ]
+}

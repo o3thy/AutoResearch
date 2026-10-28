@@ -1,0 +1,2 @@
+# Keep vendored upstream files byte-identical to obsidian/UPSTREAM.json on all platforms.
+obsidian/** -text

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "paper.schema.json",
+  "title": "RR discovery paper",
+  "type": "object",
+  "required": ["title", "authors", "year", "doi", "decision", "metadata_status"],
+  "properties": {
+    "title": {"type": "string", "minLength": 1},
+    "authors": {"type": "array", "items": {"type": "string"}},
+    "authors_complete": {"type": "boolean"},
+    "year": {"type": ["integer", "null"], "minimum": 1500},
+    "doi": {"type": ["string", "null"]},
+    "url": {"type": ["string", "null"]},
+    "rr_url": {"type": ["string", "null"]},
+    "abstract": {"type": ["string", "null"]},
+    "journal": {"type": ["string", "null"]},
+    "rr_author_label": {"type": ["string", "null"]},
+    "decision": {"enum": ["keep", "maybe", "reject"]},
+    "relationship_type": {"enum": [null, "direct_continuation", "adjacent_method", "background", "out_of_scope"]},
+    "discovery_relation": {"type": "string"},
+    "notes": {"type": ["string", "null"]},
+    "metadata_status": {"enum": ["unverified", "verified", "conflict"]},
+    "provenance": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

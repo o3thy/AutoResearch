@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+artifacts/
+zotero/download/*
+!zotero/download/download.md
+.local/
+obsidian/config.toml

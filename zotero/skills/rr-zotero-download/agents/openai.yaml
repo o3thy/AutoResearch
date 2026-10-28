@@ -1,0 +1,6 @@
+interface:
+  display_name: "RR Zotero Download"
+  short_description: "Download PDFs and complete pending Zotero attachments"
+  default_prompt: "Use $rr-zotero-download to archive PDFs from an RR JSON list in my specified Zotero collection and report any manual downloads needed."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,1 @@
+"""ResearchRabbit module regression tests."""
